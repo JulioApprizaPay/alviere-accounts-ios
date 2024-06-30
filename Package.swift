@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "AccountsSDK",
+    name: "AccountsApprizaPay",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v11)
     ],
     products: [
         .library(
-            name: "AccountsSDK",
+            name: "AccountsApprizaPay",
             type: .static,
             targets: ["AccountsSDKDeps"]
         )
@@ -30,16 +30,16 @@ let package = Package(
         .target(
              name: "AccountsSDKDeps",
              dependencies: [
-                 "AccountsSDK",
+                 "AccountsApprizaPay",
                  "AlCore",
                  "AlCamera"
              ],
              path: "AccountsSDKDeps"
          ),
         .binaryTarget(
-            name: "AccountsSDK",
+            name: "AccountsApprizaPay",
             url: "https://github.com/Alviere/alviere-accounts-ios/releases/download/0.9.20/AccountsSDK.xcframework.zip",
-            checksum: "626aa57894def9cbff86d258a0248b4a1723cbe0bccdf94565646000ae97bf6a"
+            checksum: "793e6e1b9ff6be0853bb86e85ff2e776dbd695247cfde8b9cd9131a68c007ca5"
         )
     ]
 )
